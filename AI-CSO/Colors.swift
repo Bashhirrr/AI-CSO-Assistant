@@ -34,5 +34,8 @@ extension Color {
     static let redLight = Color(hex: "F6E6E6")      // Light red / pinkish
     static let redAccent = Color(hex: "970000")     // Accent red
     static let redHighlight = Color(hex: "A91717")  // Highlight red
+    static let redDark = Color(hex: "7E0707")
+    static let redDim = Color(hex: "E4B0B0")
+    static let greenLight = Color(hex: "64EB3F")
 }
 

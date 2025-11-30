@@ -17,24 +17,6 @@ struct ContentView: View {
                 
                 VStack(alignment: .leading, spacing: 24) {
                     
-                    // MARK: - Header
-//                    HStack {
-//
-//
-//                        Spacer()
-//
-//                        Button(action: {}) {
-//                            Image(systemName: "bell.fill")
-//                                .font(.system(size: 22))
-//                                .foregroundColor(.red)
-//                                .padding(12)
-//                                .background(Color.red.opacity(0.15))
-//                                .clipShape(Circle())
-//                        }
-//                    }
-//                    .padding(.horizontal)
-                    
-                    
                     // MARK: - Assistant Card
                     
                     VStack(alignment: .leading, spacing: 6) {
@@ -97,15 +79,30 @@ struct ContentView: View {
                             )
                         }
                         .buttonStyle(.plain)
+                        
+                        NavigationLink {
+//                            VoiceCallView()
+                            VoiceCallViewTest()
+                        } label: {
+                            SupportRow(icon: "phone.fill",
+                                       title: "Voice Call",
+                                       subtitle: "Speak with AI assistant"
+                            )
+                        }
+                        .buttonStyle(.plain)
 
                         
-                        SupportRow(icon: "phone.fill",
-                                   title: "Voice Call",
-                                   subtitle: "Speak with AI assistant")
+                        NavigationLink {
+//                            VideoCallView()
+                            VideoCallViewTest()
+                            
+                        } label: {
+                            SupportRow(icon: "video.fill",
+                                       title: "Video Avatar",
+                                       subtitle: "Face-to-face AI experience")
+                        }
+                        .buttonStyle(.plain)
                         
-                        SupportRow(icon: "video.fill",
-                                   title: "Video Avatar",
-                                   subtitle: "Face-to-face AI experience")
                     }
                     .padding(.horizontal)
                     
